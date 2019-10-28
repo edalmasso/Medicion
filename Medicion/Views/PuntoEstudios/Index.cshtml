@@ -1,0 +1,125 @@
+﻿@model IEnumerable<Medicion.Models.PuntoEstudio>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nombre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Localidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Latitud)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Longitud)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaCreado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaBaja)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pozo_Profundidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Pozo_Diametro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Punzado_Largo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Punzado_Diametro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Temp_Pozo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DensidadRoca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Saturacion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Presion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DensidadFluido)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Localidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Latitud)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Longitud)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaCreado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaBaja)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pozo_Profundidad)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Pozo_Diametro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Punzado_Largo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Punzado_Diametro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Temp_Pozo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DensidadRoca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Saturacion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Presion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DensidadFluido)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

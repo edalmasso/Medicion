@@ -1,0 +1,25 @@
+﻿@model IEnumerable<Empresa>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Cuit</th>
+            </tr>
+        </thead>
+        @foreach (var empresa in Model)
+        {
+        <tr>
+            <td>@empresa.RazonSocial</td>
+            <td>@empresa.CUIT</td>
+        </tr>
+        }
+    </table>
+</div>
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
